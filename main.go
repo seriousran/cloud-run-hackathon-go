@@ -45,7 +45,7 @@ func play(input ArenaUpdate) (response string) {
 	log.Printf("IN: %#v", input)
 		
 
-	commands := []string{"F", "F", "F", "F", "F", "F", "L", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T"}
+	commands := []string{"F", "F", "F", "F", "L", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T"}
 	rand := rand2.Intn(len(commands))
 	
 	// TODO add your implementation here to replace the random response
