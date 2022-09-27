@@ -43,6 +43,11 @@ func handler(w http.ResponseWriter, req *http.Request) {
 
 func play(input ArenaUpdate) (response string) {
 	log.Printf("IN: %#v", input)
+	
+	if input.Arena.State["https://console.cloud.google.com/cloud-build/builds;region=global/39179076-3b81-4066-9f0f-a61caded2a10?project=qwiklabs-gcp-04-5db0dc1bae3d"].WasHit {
+		return commands("T")
+	}
+		
 
 	commands := []string{"F", "F", "F", "F", "F", "F", "L", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T"}
 	rand := rand2.Intn(len(commands))
